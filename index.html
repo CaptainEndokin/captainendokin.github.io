@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="viewpage">
+        <div id="calendarPage" style="display:none">
+            <div class="localheader">
+                <div style="display: flex; max-height: 100%;">
+                    <img src="imgs/OLogotypTransparent.png" class='headerlogo'></img>
+                    <h1 class='titleheader'>INFOSKÄRM</h1>
+                    <div id="buttons" style="flex: 1;">
+                        <div id="btnadd" class="headerbtn">
+                            <img src="imgs/gubbeplus.png" style="width:75px; height:75px;
+                            display: block;
+                            margin-left: auto;
+                            margin-right: auto;"></img>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul id="calendarList">
+
+            </ul>
+        </div>
+        <div id="adduserPage" style="display:none">
+            <div class="localheader">
+                <div style="display: flex; max-height: 100%;">
+                    <img src="imgs/OLogotypTransparent.png" class='headerlogo'></img>
+                    <h1 class='titleheader'>INFOSKÄRM</h1>
+                    <div id="buttons" style="flex: 1;">
+                        <div id="btnback" class="headerbtn">
+                            <img src="imgs/backIcon.png" style="width:75px; height:75px;
+                            display: block;
+                            margin-left: auto;
+                            margin-right: auto;"></img>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="addusercontainer">
+                <div class="adduserpageheader">Search for an email adress...</div>
+                <div class="adduserSearch">
+                    <input id="addusersearchinput" type="text" style="font-size: 40px; width: 100%;"></input>
+                    <button id="searchBtn" style="min-width: 100px;">
+                        <img src="../../../imgs/search.png" style="width: 30px; height: 30px; padding-top: 10px;"></img>
+                    </button>
+                </div>
+                <div id="resultsPage">
+                    <p id="resultslbl" style="font-size: 40px; padding: 0px 50px; margin: 0px; color:white;"></p>
+                    <ul id="addUserBlockList" style="margin-top: 2px;">
+                    </ul>
+                </div>
+            
+
+            </div>
+        </div>
+        <div id="addUserPopup" style="display: none;">
+            <div class="aupb">
+                <div class="addusercontainer">
+                    <button id="btnback" style="float: right;">Back</button>
+                    <div class="adduserpageheader">Search for an email adress...</div>
+                    <div class="adduserSearch">
+                        <input id="addusersearchinput" type="text" style="font-size: 40px; width: 100%;"></input>
+                        <button id="searchBtn" style="min-width: 100px;">
+                            <img src="../../../imgs/search.png" style="width: 30px; height: 30px; padding-top: 10px;"></img>
+                        </button>
+                    </div>
+                    <div id="resultsPage">
+                        <p id="resultslbl" style="font-size: 40px; padding: 0px 50px; margin: 0px; color:white;"></p>
+                        <ul id="addUserBlockList" style="margin-top: 2px;">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="confirmRemovePersonPopup" style="display: none;">
+            <div class="crppb">
+                <div class="crpp1"><p id="crpplbl">Do you want to remove {person}?</p></div>
+                <div class="crpp2">
+                    <button id="btndel">Remove</button>
+                    <button id="btncnl">Cancel</button>
+                </div>
+            </div>
+           
+            
+        </div>
+    </div>
+
+
+<script src="./dist/main.js"></script>
+</body>
+</html> 

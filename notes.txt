@@ -1,0 +1,3 @@
+using webpack-cli to compile app.ts (and everything it uses) into dist/main.js
+to compile, type this in terminal: webpack-cli app.ts
+then run index.html to see the web app
