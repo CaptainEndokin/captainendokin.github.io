@@ -12,20 +12,9 @@ import { MeetingGetter } from "./src/networking/meetingGetter";
 
 console.log("hello");
 let startPrincipals:string[] = ["nicolas.ljungvall@simrishamn.se"];
-let cookie = getCookie("pass");
-if(cookie != "brunnsparken"){
-console.log("felaktigt lösen");
-}
-else{
-    DataHelper.RefreshTokenAsync(IDTask.CreateVoid(onTokenGet));
-    setInterval(onTimerTick, 33); // 33 milliseconds = ~ 30 frames per sec
-}
 
-function getCookie(name) {
-    const value = `; ${document.cookie}`;
-    const parts = value.split(`; ${name}=`);
-    if (parts.length === 2) return parts.pop().split(';').shift();
-  }
+
+
 
 //NetTalker.getToken();
 //NetTalker.searchByPrincipal("nicolas.ljungvall@simrishamn.se");
@@ -63,6 +52,20 @@ function onTimerTick() {
     
 }
 
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+  }
 
+let cookie = getCookie("pass");
+if(cookie != "brunnsparken"){
+console.log("felaktigt lösen");
+}
+else{
+    console.log("ok lösen");
+    DataHelper.RefreshTokenAsync(IDTask.CreateVoid(onTokenGet));
+    setInterval(onTimerTick, 33); // 33 milliseconds = ~ 30 frames per sec
+}
 
 
