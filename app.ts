@@ -14,7 +14,7 @@ console.log("hello");
 let startPrincipals:string[] = ["nicolas.ljungvall@simrishamn.se"];
 let cookie = getCookie("pass");
 if(cookie != "brunnsparken"){
-
+console.log("felaktigt lösen");
 }
 else{
     DataHelper.RefreshTokenAsync(IDTask.CreateVoid(onTokenGet));
